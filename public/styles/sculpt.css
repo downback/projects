@@ -1,0 +1,71 @@
+button {
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+
+.drawer {
+  display: flex;
+  padding: 1rem;
+}
+.drawer > div:nth-child(1) {
+  width: 40%;
+  padding-top: 13.7469504vw;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.drawer > div:nth-child(1) canvas {
+  width: 30.34vw;
+  height: 30.34vw;
+}
+.drawer > div:nth-child(1) > div:first-of-type {
+  display: flex;
+}
+.drawer > div:nth-child(1) > div:first-of-type .control-pan {
+  display: flex;
+  flex-direction: column;
+  width: 1.875rem;
+}
+.drawer > div:nth-child(1) > div:first-of-type .control-pan input[type=number] {
+  display: none;
+}
+.drawer > div:nth-child(1) > div:first-of-type .control-pan #submitImage {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-start;
+}
+.drawer > div:nth-child(2) {
+  width: 60%;
+  height: calc(100vh - 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.palette {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-top: 1.25rem;
+}
+.palette li {
+  padding-right: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+.palette li:last-of-type {
+  padding-right: 0;
+}
+.palette li input[type=radio] {
+  display: none;
+}
+.palette li input[type=radio]:checked ~ label {
+  border-radius: 100rem;
+}
+.palette li label {
+  width: 3.4375rem;
+  height: 3.4375rem;
+  display: block;
+}/*# sourceMappingURL=sculpt.css.map */

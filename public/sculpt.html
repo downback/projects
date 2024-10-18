@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/sculpt.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-storage-compat.js"></script>
+    <title>Sculpture of Stickers</title>
+  </head>
+  <body>
+    <section class="fixed-items">
+      <div class="fixed logo"><img src="./assets/gnb-logo.svg" alt="" /></div>
+      <div class="fixed sculpt">
+        <a href="./index.html">ARCHIVE</a>
+      </div>
+    </section>
+    <section class="background-panel">
+      <div class="panel-pillar"><div class="line"></div></div>
+    </section>
+    <section class="drawer">
+      <div>
+        <div>
+          <canvas id="brushViewer"></canvas>
+          <div class="control-pan">
+            <button id="submitImage">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M14.967 2.65671L25.1389 14.5238L22.8611 16.4762L16.5 9.0549V20H13.5V9.23694L7.66584 16.4438L5.33411 14.5562L14.967 2.65671ZM24 24.5V27.5H5.99997V24.5H24Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+            <button name="brushSizeController" class="plus">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 16.16H13.96V24.44H17.04V16.16H25V13.24H17.04V5H13.96V13.24H6V16.16Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+            <button name="brushSizeController" class="minus">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M7 16.6413H23.5V13.2812H7V16.6413Z" fill="white" />
+              </svg>
+            </button>
+            <input
+              type="number"
+              id="brushSize"
+              name="brushSize"
+              value="50"
+              min="10"
+              step="5"
+            />
+          </div>
+        </div>
+        <ul class="palette">
+          <li>
+            <input
+              type="radio"
+              name="palette"
+              id="red"
+              checked
+              value="#FF004C"
+            />
+            <label for="red" style="background: #ff004c"></label>
+          </li>
+          <li>
+            <input type="radio" name="palette" id="orange" value="#FF4C00" />
+            <label for="orange" style="background: #ff4c00"></label>
+          </li>
+          <li>
+            <input type="radio" name="palette" id="yellow" value="#FFE927" />
+            <label for="yellow" style="background: #ffe927"></label>
+          </li>
+          <li>
+            <input type="radio" name="palette" id="lime" value="#52FF00" />
+            <label for="lime" style="background: #52ff00"></label>
+          </li>
+          <li>
+            <input type="radio" name="palette" id="sky" value="#00A3FF" />
+            <label for="sky" style="background: #00a3ff"></label>
+          </li>
+          <li>
+            <input type="radio" name="palette" id="blue" value="#0047FF" />
+            <label for="blue" style="background: #0047ff"></label>
+          </li>
+          <li>
+            <input type="radio" name="palette" id="purple" value="#BD00FF" />
+            <label for="purple" style="background: #bd00ff"></label>
+          </li>
+          <li>
+            <input type="radio" name="palette" id="brown" value="#A75A41" />
+            <label for="brown" style="background: #a75a41"></label>
+          </li>
+        </ul>
+      </div>
+      <div class="canvas-holder">
+        <canvas id="jsCanvas"></canvas>
+      </div>
+    </section>
+    <script src="./js/firebaseConfig.js"></script>
+    <script src="./js/sculpt.js"></script>
+  </body>
+</html>
