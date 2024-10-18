@@ -1,0 +1,78 @@
+button {
+  background: transparent;
+  // -webkit-appearance: none;
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+
+.drawer {
+  display: flex;
+  padding: 1rem;
+  > div:nth-child(1) {
+    width: 40%;
+    padding-top: calc(33.472vw * 0.4107);
+    padding-bottom: calc(4.5rem + 0.5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    canvas {
+      width: 30.34vw;
+      height: 30.34vw;
+      // background-color: #ff0;
+    }
+    > div:first-of-type {
+      display: flex;
+      .control-pan {
+        display: flex;
+        flex-direction: column;
+        width: 1.875rem;
+
+        input[type="number"] {
+          display: none;
+        }
+
+        #submitImage {
+          flex-grow: 1;
+          display: flex;
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+  > div:nth-child(2) {
+    // background: #5f5f5f;
+    width: 60%;
+    height: calc(100vh - 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.palette {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-top: 1.25rem;
+
+  li {
+    padding-right: 0.3rem;
+    padding-bottom: 0.3rem;
+    &:last-of-type {
+      padding-right: 0;
+    }
+    input[type="radio"] {
+      display: none;
+      &:checked ~ label {
+        border-radius: 100rem;
+      }
+    }
+    label {
+      width: 3.4375rem;
+      height: 3.4375rem;
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-storage-compat.js"></script>
+    <title>Sculpture of Stickers</title>
+  </head>
+  <body>
+    <section class="fixed-items">
+      <div class="fixed logo"><img src="./assets/gnb-logo.svg" alt="" /></div>
+      <div class="fixed info">
+        <p>
+          SCULPTURES OF STICKER는 스티커의 조각이라는 뜻으로, 온라인 웹사이트를
+          통해 전시에 방문한 사람들이 스티커를 이용해 또다른 ‘무언가’를 조각하여
+          재생산하는 전시 공간이자 작업 공간입니다.
+        </p>
+        <span>
+          SCULPT를 눌러 새로운 창작물을 조각하고, ARCHIVE에서 구경하세요.
+          업로드한 시간 뒤에 숨겨진 익명의 창작가들은 어떤 말 혹은 행동이든
+          행위할 수 있는 또다른 예술가가 됩니다.
+        </span>
+      </div>
+      <div class="fixed sculpt">
+        <a href="./sculpt.html">SCULPT</a>
+      </div>
+    </section>
+    <section class="background-panel">
+      <div class="panel-holder">
+        <img src="./assets/panel-s.svg" alt="" />
+        <img src="./assets/panel-c.svg" alt="" />
+        <img src="./assets/panel-u.svg" alt="" />
+        <img src="./assets/panel-l.svg" alt="" />
+        <img src="./assets/panel-p.svg" alt="" />
+        <img src="./assets/panel-t.svg" alt="" />
+      </div>
+      <div class="panel-pillar"><div class="line"></div></div>
+    </section>
+    <section class="gallery"></section>
+    <script src="./js/firebaseConfig.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
